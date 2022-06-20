@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
+import CreateListPage from "./components/CreateListPage/CreateListPage";
+import ListPage from "./components/ListPage/ListPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const address =
+	process.env.NODE_ENV === "development" ? "http://localhost:3030" : "";
+
+const App = () => {
+	const [todoLists, setTodoLists] = useState([]);
+	useEffect(() => {
+		fetch(`${address}/api/lists`)
+			.then((response) => response.json())
+			.then((data) => setTodoLists(data))
+			.catch((error) => console.log(error.message));
+	}, []);
+	console.log(todoLists);
+	return (
+		<section className="App">
+			<Nav />
+			<Routes>
+				<Route path="/" element={<Home todoLists={todoLists} />} />
+				<Route
+					path="/create-list"
+					element={<CreateListPage setTodoLists={setTodoLists} />}
+				/>
+				<Route
+					path="/lists/:listId"
+					element={<ListPage todoLists={todoLists} />}
+				/>
+			</Routes>
+		</section>
+	);
+};
 
 export default App;
