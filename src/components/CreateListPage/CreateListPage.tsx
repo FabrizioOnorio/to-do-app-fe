@@ -18,6 +18,7 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 		const newList = {
 			listName,
 			listId: uuidv4(),
+			items: [],
 		};
 		const requestOptions = {
 			method: "POST",

@@ -16,7 +16,7 @@ const App = () => {
 			.then((data) => setTodoLists(data))
 			.catch((error) => console.log(error.message));
 	}, []);
-	console.log(todoLists);
+
 	return (
 		<section className="App">
 			<Nav />
@@ -28,7 +28,9 @@ const App = () => {
 				/>
 				<Route
 					path="/lists/:listId"
-					element={<ListPage todoLists={todoLists} />}
+					element={
+						<ListPage todoLists={todoLists} setTodoLists={setTodoLists} />
+					}
 				/>
 			</Routes>
 		</section>
