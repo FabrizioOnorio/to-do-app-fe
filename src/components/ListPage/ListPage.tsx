@@ -20,7 +20,9 @@ const ListPage = ({ todoLists, setTodoLists }: IListPageProps) => {
 
 	const todoItems = todoObject?.items.filter((todo) => todo.completed === false);
 
-	const doneTodoItems = todoObject?.items.filter((todo) => todo.completed === true);
+	const doneTodoItems = todoObject?.items.filter(
+		(todo) => todo.completed === true
+	);
 
 	return (
 		<>
@@ -32,8 +34,8 @@ const ListPage = ({ todoLists, setTodoLists }: IListPageProps) => {
 			<ItemsList
 				todoItems={todoItems}
 				doneTodoItems={doneTodoItems}
-				setTodoLists={setTodoLists}
 				selectedListId={selectedListId}
+				setTodoLists={setTodoLists}
 			/>
 		</>
 	);

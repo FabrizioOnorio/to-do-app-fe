@@ -11,10 +11,12 @@ interface ICreateListPageProps {
 
 const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 	const [listName, setListName] = useState("");
+	const [disabled, setDisabled] = useState(false);
 	const navigate = useNavigate();
 
 	const handleSubmit = async (event: React.FormEvent) => {
 		event.preventDefault();
+    setDisabled(true);
 		const newList = {
 			listName,
 			listId: uuidv4(),
@@ -37,6 +39,7 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 			.catch((error) => console.log(error.message));
 
 		navigate("/");
+		setDisabled(false);
 	};
 	return (
 		<>
@@ -48,7 +51,12 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 					onChange={(e) => setListName(e.target.value)}
 					required
 				/>
-				<button type="submit">Create</button>
+				<button
+					type="submit"
+					disabled={disabled}
+				>
+					Create
+				</button>
 			</form>
 		</>
 	);

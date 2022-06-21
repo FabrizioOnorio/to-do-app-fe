@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ItodoItem } from "../../types";
-import Filter from "../Filter/Filter";
 import Item from "../Item/Item";
 
 interface IItemsListProps {
@@ -12,20 +11,28 @@ interface IItemsListProps {
 
 const ItemsList = ({
 	todoItems,
-  doneTodoItems,
+	doneTodoItems,
 	setTodoLists,
 	selectedListId,
 }: IItemsListProps) => {
-  const [oldTodos, setOldTodos] = useState(false);
-  const handleClick = () => {
-    setOldTodos(!oldTodos);
-  };
+	const [oldTodos, setOldTodos] = useState(false);
+	const [search, setSearch] = useState("");
+	const searchResults = todoItems?.filter((todo) =>
+		todo.itemName.includes(search)
+	);
+	const handleClick = () => {
+		setOldTodos(!oldTodos);
+	};
 	return (
 		<>
 			<section>
 				<p>To do:</p>
-				<Filter todoItems={todoItems} />
-				{todoItems?.map((todoItem: ItodoItem) => {
+				<input
+					placeholder="filter..."
+					value={search}
+					onChange={(e) => setSearch(e.target.value)}
+				/>
+				{searchResults?.map((todoItem: ItodoItem) => {
 					return (
 						<Item
 							key={todoItem.itemId}
@@ -39,7 +46,6 @@ const ItemsList = ({
 			<button onClick={handleClick}>
 				{oldTodos ? "Hide" : "View"} Old Todos
 			</button>
-
 			<section style={{ display: oldTodos ? "block" : "none" }}>
 				<p>Done:</p>
 				{doneTodoItems?.map((todoItem: ItodoItem) => {

@@ -10,11 +10,7 @@ interface IitemProps {
 const address =
 	process.env.NODE_ENV === "development" ? "http://localhost:3030" : "";
 
-const Item = ({
-	todoItem,
-	setTodoLists,
-	selectedListId,
-}: IitemProps) => {
+const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 	const handleClick = async () => {
 		const requestOptions = {
 			method: "PUT",
