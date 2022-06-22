@@ -10,11 +10,15 @@ const address =
 
 const App = () => {
 	const [todoLists, setTodoLists] = useState([]);
+
 	useEffect(() => {
-		fetch(`${address}/api/lists`)
-			.then((response) => response.json())
-			.then((data) => setTodoLists(data))
-			.catch((error) => console.log(error.message));
+		const interval = setInterval(() => {
+			fetch(`${address}/api/lists`)
+				.then((response) => response.json())
+				.then((data) => setTodoLists(data))
+				.catch((error) => console.log(error.message));
+		}, 2000);
+		return () => clearInterval(interval);
 	}, []);
 
 	return (
