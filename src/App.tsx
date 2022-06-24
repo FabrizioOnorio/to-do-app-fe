@@ -19,7 +19,7 @@ const App = () => {
 				.then((response) => response.json())
 				.then((data) => setTodoLists(data))
 				.catch((error) => console.log(error.message));
-		}, 2000);
+		}, 1500);
 		return () => clearInterval(interval);
 	}, []);
 
