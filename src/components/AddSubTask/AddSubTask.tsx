@@ -65,6 +65,7 @@ const AddSubTask = ({
 				value={newSubTask}
 				onChange={(e) => setNewSubTask(e.target.value)}
 				autoFocus
+				maxLength={45}
 				required
 			/>
 			<input
@@ -72,6 +73,7 @@ const AddSubTask = ({
 				placeholder="add cost in $"
 				value={newSubTaskCost}
 				onChange={(e) => setNewSubTaskCost(e.target.value)}
+				maxLength={3}
 				type="number"
 			/>
 			<button type="submit" className="subTask__form--input">

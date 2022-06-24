@@ -50,6 +50,7 @@ const AdditemsForm = ({ selectedListId, setTodoLists }: IAdditemsFormProps) => {
 				placeholder="add todo"
 				value={newItem}
 				onChange={(e) => setNewItem(e.target.value)}
+				maxLength={45}
 				required
 			/>
 			<button type="submit" className="addtask__form--button">

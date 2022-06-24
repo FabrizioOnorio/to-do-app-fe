@@ -52,6 +52,7 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 					value={listName}
 					onChange={(e) => setListName(e.target.value)}
 					autoFocus
+					maxLength={45}
 					required
 				/>
 				<button
