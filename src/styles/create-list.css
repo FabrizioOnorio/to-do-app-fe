@@ -1,13 +1,14 @@
 .createlist {
 	width: 100%;
 	min-height: 100vh;
+  margin: 10rem auto 1rem auto;
 }
 
 .createlist__form {
-	margin: 10rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 .createlist__form--input {
@@ -15,7 +16,6 @@
 	border-radius: 1rem;
 	border: 1.5px solid #89b0ae;
 	font-size: large;
-	min-width: 50vw;
 }
 
 .createlist__form--button {
@@ -24,7 +24,6 @@
 	border-radius: 1rem;
 	background-color: #a4c3b2;
 	padding: 1rem;
-	min-width: 50vw;
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: #f6fff8;

@@ -1,52 +1,68 @@
 .home {
-  text-align: center;
-  width: 100%;
-  min-height: 100vh;
+	text-align: center;
+	width: 100%;
+	min-height: 100vh;
 }
 
 .home__title {
-  color: #555b6e;
-  font-size: 2rem;
-  font-weight: bolder;
-  margin: 1rem 0 1.5rem 0;
+	color: #555b6e;
+	font-size: 2rem;
+	font-weight: bolder;
+	margin: 1.5rem 0 2.5rem 0;
 }
 
 .home__button--create {
-  font-size: 1.5rem;
-  font-weight:600;
-  color: #f6fff8;
-  background-color: #a4c3b2;
-  padding: 0.8rem 1.7rem;
-  margin: 1rem 0;
-  border: 1.5px solid #89b0ae;
-  border-radius: 1rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	border: 1.5px solid #89b0ae;
+	border-radius: 1rem;
+	background-color: #a4c3b2;
+	padding: 0.8rem 1rem;
+	min-width: 50vw;
+	color: #f6fff8;
 }
 
 .home__button--create:hover {
-  background-color: #a4c3b290;
-  border: 1.5px solid #8fb2b0;
-  color: #555b6e6f;
+	background-color: #a4c3b290;
+	border: 1.5px solid #8fb2b0;
+	color: #555b6e6f;
 }
 
 .home__lists {
-  margin: 2rem;
-  background-color: #faf9f9;
-  padding: 0.2rem 0.5rem;
-  border-radius: 1rem;
+	margin: 2.5rem auto 1rem auto;
+	background-color: #faf9f9;
+	padding: 0.2rem 0.5rem;
+	border-radius: 1rem;
+	max-width: 400px;
 }
 
 .home__list {
-  background-color: #cce3de;
-  margin: 0.3rem 0;
-  border-radius: 1rem;
-  padding: 1rem 0;
-}
-
-.home__list:hover {
-  background-color: #cce3de7b;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .home__list--name {
-  color: #3d5a80;
+	background-color: #cce3de;
+	margin: 0.3rem 0;
+	border-radius: 1rem;
+	padding: 1rem 1rem;
+	width: 21rem;
+	color: #3d5a80;
+}
 
+.home__list--name:hover {
+	background-color: #cce3de7b;
+	z-index: -1;
+}
+
+.home__list--delete {
+	color: #e76f51;
+	background-color: #cce3de;
+	margin: 0.3rem 0;
+	border-radius: 0.8rem;
+	width: 2.5rem;
+	height: 3.2rem;
+	padding: 0.6rem;
+	cursor: pointer;
 }

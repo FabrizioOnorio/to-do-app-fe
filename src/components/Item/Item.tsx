@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ItodoItem } from "../../types";
 import AddSubTask from "../AddSubTask/AddSubTask";
 import SubTaskList from "../SubtTaskList/SubTaskList";
+import { MdOutlineDone, MdRemoveDone } from "react-icons/md";
+import { BiMessageSquareAdd } from "react-icons/bi";
 
 interface IitemProps {
 	todoItem: ItodoItem;
@@ -43,12 +45,29 @@ const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 	};
 	return (
 		<section className="item">
-			<p>
-				{todoItem.itemName} - total costs: {todoItem.totalCost} - item cost:{" "}
-				{todoItem.itemCost}
-			</p>
-			<button onClick={handleClick}>Mark as Done</button>
-			<button onClick={handleClickSubTask}>Add Sub-Task</button>
+			<section className="item__task">
+				<p>
+					{todoItem.itemName} - total costs: {todoItem.totalCost} - item cost:{" "}
+					{todoItem.itemCost}
+				</p>
+				<section>
+					<MdOutlineDone
+						onClick={handleClick}
+						className="item--done"
+						style={{ display: todoItem.completed ? "none" : "" }}
+					/>
+					<MdRemoveDone
+						onClick={handleClick}
+						className="item--done"
+						style={{ display: todoItem.completed ? "" : "none" }}
+					/>
+					<BiMessageSquareAdd
+						onClick={handleClickSubTask}
+						className="item--done"
+						style={{ display: todoItem.completed ? "none" : "" }}
+					/>
+				</section>
+			</section>
 			<section style={{ display: addSubTask ? "" : "none" }}>
 				<AddSubTask
 					selectedListId={selectedListId}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IList } from "../../types";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 interface IListProps {
 	list: IList;
@@ -26,14 +27,14 @@ const ListDiv = ({ list, setTodoLists }: IListProps) => {
 	};
 
 	return (
-		<>
-			<Link className="home__list--name" to={`/lists/${list.listId}`}>
-				<section className="home__list">
+		<section className="home__list">
+			<Link to={`/lists/${list.listId}`}>
+				<section className="home__list--name">
 					<p>{list.listName}</p>
 				</section>
 			</Link>
-			<button onClick={handleClick}>Delete</button>
-		</>
+			<RiDeleteBin6Line onClick={handleClick} className="home__list--delete" />
+		</section>
 	);
 };
 

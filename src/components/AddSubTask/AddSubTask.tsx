@@ -58,20 +58,25 @@ const AddSubTask = ({
 			.catch((error) => console.log(error.message));
 	};
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className="subTask__form">
 			<input
+				className="subTask__form--input"
 				placeholder="add todo"
 				value={newSubTask}
 				onChange={(e) => setNewSubTask(e.target.value)}
+				autoFocus
 				required
 			/>
 			<input
+				className="subTask__form--input"
 				placeholder="add cost in $"
 				value={newSubTaskCost}
 				onChange={(e) => setNewSubTaskCost(e.target.value)}
 				type="number"
 			/>
-			<button type="submit">Enter</button>
+			<button type="submit" className="subTask__form--input">
+				Enter
+			</button>
 		</form>
 	);
 };

@@ -44,14 +44,13 @@ const ItemsList = ({
 					);
 				})}
 			</section>
-			<button onClick={handleClick}>
+			<button onClick={handleClick} className="itemsList--hide">
 				{oldTodos ? "Hide" : "View"} Old Todos
 			</button>
 			<section
 				style={{ display: oldTodos ? "block" : "none" }}
-				className="itemsList"
+				className="itemsList__done"
 			>
-				<p>Done:</p>
 				{doneTodoItems?.map((todoItem: ItodoItem) => {
 					return (
 						<Item

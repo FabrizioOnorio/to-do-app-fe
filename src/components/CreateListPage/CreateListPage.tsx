@@ -18,7 +18,7 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 
 	const handleSubmit = async (event: React.FormEvent) => {
 		event.preventDefault();
-    setDisabled(true);
+		setDisabled(true);
 		const newList = {
 			listName,
 			listId: uuidv4(),
@@ -51,6 +51,7 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 					placeholder="List name"
 					value={listName}
 					onChange={(e) => setListName(e.target.value)}
+					autoFocus
 					required
 				/>
 				<button

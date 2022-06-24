@@ -1,4 +1,5 @@
 import React from "react";
+import { MdOutlineDone, MdRemoveDone } from "react-icons/md";
 import { ISubTaskAdded, ItodoItem } from "../../types";
 
 interface ISubTaskProps {
@@ -47,12 +48,21 @@ const Subtask = ({
 			.catch((error) => console.log(error.message));
 	};
 	return (
-		<>
+		<section className={subTask.completed ? "subTask--undone" : "subTask"}>
 			<p>
 				{subTask.subTaskName} - sub task cost: {subTask.subTaskCost}
 			</p>
-			<button onClick={handleClick}>Mark as Done</button>
-		</>
+			<MdOutlineDone
+				onClick={handleClick}
+				className="item--done"
+				style={{ display: subTask.completed ? "none" : "" }}
+			/>
+			<MdRemoveDone
+				onClick={handleClick}
+				className="item--done"
+				style={{ display: subTask.completed ? "" : "none" }}
+			/>
+		</section>
 	);
 };
 

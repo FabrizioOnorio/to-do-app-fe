@@ -7,8 +7,9 @@
 .addtask__form {
 	display: flex;
 	flex-direction: column;
-	margin: 1rem 0;
+	margin: 1rem auto;
 	gap: 0.5rem;
+	max-width: 400px;
 }
 
 .addtask__form--input {
@@ -25,7 +26,6 @@
 	border-radius: 1rem;
 	background-color: #a4c3b2;
 	padding: 0.5rem;
-	min-width: 50vw;
 	font-size: 1.3rem;
 	font-weight: 500;
 	color: #f6fff8;
@@ -41,24 +41,47 @@
 	color: #555b6e;
 	font-size: 2rem;
 	font-weight: bolder;
-	margin: 1rem 0 1.5rem 0;
+	margin: 1rem 0 1.5re
 }
 
 .listItems__filter {
-	padding: 0.5rem;
+	padding: 0.4rem;
 	border-radius: 1rem;
 	border: 1.5px solid #89b0ae;
 	font-size: large;
-	min-width: 50vw;
 	margin-bottom: 1rem;
-  margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 .itemsList {
-	margin: 2rem;
+	margin: 2rem auto;
 	background-color: #faf9f9;
 	padding: 0.3rem 0.5rem;
-  border-radius: 1rem;
+	border-radius: 1rem;
+	max-width: 400px;
+}
+
+.itemsList__done {
+	margin: 2rem auto;
+	background-color: #dad7cd;
+	padding: 0.3rem 0.5rem;
+	border-radius: 1rem;
+	max-width: 400px;
+}
+
+.itemsList__done > .item {
+	background-color: #edede9;
+}
+
+.itemsList--hide {
+	margin-top: 1rem;
+	border: 1.5px solid #89b0ae;
+	border-radius: 1rem;
+	background-color: #a4c3b2;
+	padding: 0.5rem 1rem;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #f6fff8;
 }
 
 .item {
@@ -68,6 +91,68 @@
 	padding: 1rem 0;
 }
 
+.item--done {
+	font-size: 1.5rem;
+	color: #555b6e;
+}
+
+.item--done:hover {
+	color: #83c5be;
+}
+
 .item:hover {
 	background-color: #cce3de7b;
+}
+
+.item__task {
+	display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  align-items: center;
+}
+
+.subTask--undone {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0.2rem;
+  margin-left: 2.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
+  background-color: #edede9;
+  border-radius: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: #555b6e;
+}
+
+.subTask {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0.2rem;
+  margin-left: 2.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
+  background-color: #f6fff8;
+  border-radius: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: #555b6e;
+}
+
+.subTask__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 18rem;
+  margin: 0.5rem auto;
+}
+
+.subTask__form--input {
+  border-radius: 0.3rem;
+	border: 1.5px solid #89b0ae;
+  padding: 0.25rem 0.2rem;
+}
+
+.subTask__form--button {
+  background-color: #cce3de;
 }
