@@ -8,7 +8,7 @@ import ListPage from "./components/ListPage/ListPage";
 const address =
 	process.env.NODE_ENV === "development"
 		? "http://localhost:3030"
-		: "https://still-shore-02028.herokuapp.com/";
+		: "https://still-shore-02028.herokuapp.com";
 
 const App = () => {
 	const [todoLists, setTodoLists] = useState([]);

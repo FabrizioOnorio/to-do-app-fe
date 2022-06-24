@@ -12,7 +12,7 @@ interface IitemProps {
 const address =
 	process.env.NODE_ENV === "development"
 		? "http://localhost:3030"
-		: "https://still-shore-02028.herokuapp.com/";
+		: "https://still-shore-02028.herokuapp.com";
 
 const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 	const [addSubTask, setAddSubTask] = useState(false);
