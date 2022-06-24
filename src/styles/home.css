@@ -2,6 +2,7 @@
 	text-align: center;
 	width: 100%;
 	min-height: 100vh;
+	padding: 1rem 0.3rem;
 }
 
 .home__title {
@@ -40,8 +41,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  gap: 1rem;
-  word-break: break-word;
+	gap: 1rem;
+	word-break: break-word;
 }
 
 .home__list--name {
