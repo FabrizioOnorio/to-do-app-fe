@@ -111,6 +111,11 @@
   align-items: center;
 }
 
+.item__task--action {
+  display: flex;
+  gap: 0.3rem;
+}
+
 .subTask--undone {
   display: flex;
   justify-content: space-between;

@@ -50,7 +50,7 @@ const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 					{todoItem.itemName} - total costs: {todoItem.totalCost} - item cost:{" "}
 					{todoItem.itemCost}
 				</p>
-				<section>
+				<section className="item__task--action">
 					<MdOutlineDone
 						onClick={handleClick}
 						className="item--done"
