@@ -47,7 +47,7 @@ const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 		<section className="item">
 			<section className="item__task">
 				<p>
-					{todoItem.itemName} - total costs: {todoItem.totalCost} - item cost:{" "}
+					{todoItem.itemName} {todoItem.totalCost > 0 ? ` - total costs:  ${todoItem.totalCost} $` : ''}
 					{todoItem.itemCost}
 				</p>
 				<section className="item__task--action">

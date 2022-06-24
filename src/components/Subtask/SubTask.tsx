@@ -50,7 +50,7 @@ const Subtask = ({
 	return (
 		<section className={subTask.completed ? "subTask--undone" : "subTask"}>
 			<p>
-				{subTask.subTaskName} - sub task cost: {subTask.subTaskCost}
+				{subTask.subTaskName} - {subTask.subTaskCost} $
 			</p>
 			<MdOutlineDone
 				onClick={handleClick}
