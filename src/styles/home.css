@@ -48,12 +48,17 @@
 	background-color: #cce3de;
 	border-radius: 1rem;
 	color: #3d5a80;
+	margin: 0.3rem 0;
 	flex-grow: 1;
+}
+
+.home__list--section {
+	padding: 1rem 1rem;
+	cursor: pointer;
 }
 
 .home__list--name:hover {
 	background-color: #cce3de7b;
-	z-index: -1;
 }
 
 .home__list--delete {

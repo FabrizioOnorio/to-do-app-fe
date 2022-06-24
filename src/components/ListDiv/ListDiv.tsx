@@ -29,7 +29,7 @@ const ListDiv = ({ list, setTodoLists }: IListProps) => {
 	return (
 		<section className="home__list">
 			<Link to={`/lists/${list.listId}`} className="home__list--name">
-				<section>
+				<section className="home__list--section">
 					<p>{list.listName}</p>
 				</section>
 			</Link>
