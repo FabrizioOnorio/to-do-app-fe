@@ -48,7 +48,6 @@ const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 			<section className="item__task">
 				<p>
 					{todoItem.itemName} {todoItem.totalCost > 0 ? ` - total costs:  ${todoItem.totalCost} $` : ''}
-					{todoItem.itemCost}
 				</p>
 				<section className="item__task--action">
 					<MdOutlineDone
