@@ -161,3 +161,7 @@
 .subTask__form--button {
   background-color: #cce3de;
 }
+
+.item__task--subtasks {
+  margin-top: 0.5rem;
+}

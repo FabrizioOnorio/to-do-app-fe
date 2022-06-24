@@ -68,18 +68,20 @@ const Item = ({ todoItem, setTodoLists, selectedListId }: IitemProps) => {
 					/>
 				</section>
 			</section>
-			<section style={{ display: addSubTask ? "" : "none" }}>
-				<AddSubTask
-					selectedListId={selectedListId}
+			<section className="item__task--subtasks">
+				<section style={{ display: addSubTask ? "" : "none" }}>
+					<AddSubTask
+						selectedListId={selectedListId}
+						todoItem={todoItem}
+						setTodoLists={setTodoLists}
+					/>
+				</section>
+				<SubTaskList
 					todoItem={todoItem}
 					setTodoLists={setTodoLists}
+					selectedListId={selectedListId}
 				/>
 			</section>
-			<SubTaskList
-				todoItem={todoItem}
-				setTodoLists={setTodoLists}
-				selectedListId={selectedListId}
-			/>
 		</section>
 	);
 };
