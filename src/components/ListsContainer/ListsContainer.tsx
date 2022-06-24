@@ -9,7 +9,10 @@ interface IListsContainerProps {
 
 const ListsContainer = ({ todoLists, setTodoLists }: IListsContainerProps) => {
 	return (
-		<section className="home__lists">
+		<section
+			className="home__lists"
+			style={{ display: todoLists.length < 1 ? "none" : "" }}
+		>
 			{todoLists.map((list: IList) => {
 				return (
 					<ListDiv list={list} key={list.listId} setTodoLists={setTodoLists} />

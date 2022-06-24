@@ -48,7 +48,9 @@ const ItemsList = ({
 				{oldTodos ? "Hide" : "View"} Old Todos
 			</button>
 			<section
-				style={{ display: oldTodos ? "block" : "none" }}
+				style={{
+					display: oldTodos ? "block" : "none",
+				}}
 				className="itemsList__done"
 			>
 				{doneTodoItems?.map((todoItem: ItodoItem) => {
@@ -61,6 +63,11 @@ const ItemsList = ({
 						/>
 					);
 				})}
+				<p>
+					{doneTodoItems !== undefined && doneTodoItems?.length < 1
+						? "No tasks completed yet"
+						: ""}
+				</p>
 			</section>
 		</>
 	);

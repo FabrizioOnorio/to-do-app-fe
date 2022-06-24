@@ -67,6 +67,7 @@
 	padding: 0.3rem 0.5rem;
 	border-radius: 1rem;
 	max-width: 400px;
+  color: #555b6e;
 }
 
 .itemsList__done > .item {
