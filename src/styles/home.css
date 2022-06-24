@@ -50,6 +50,7 @@
 	border-radius: 1rem;
 	padding: 1rem 1rem;
 	color: #3d5a80;
+  flex-grow: 1;
 }
 
 .home__list--name:hover {
