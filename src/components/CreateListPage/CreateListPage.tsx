@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 
 const address =
-	process.env.NODE_ENV === "development" ? "http://localhost:3030" : "";
+	process.env.NODE_ENV === "development"
+		? "http://localhost:3030"
+		: "https://still-shore-02028.herokuapp.com/";
 
 interface ICreateListPageProps {
 	setTodoLists: React.Dispatch<React.SetStateAction<never[]>>;
@@ -42,23 +44,24 @@ const CreateListPage = ({ setTodoLists }: ICreateListPageProps) => {
 		setDisabled(false);
 	};
 	return (
-		<>
-			<p>Here you can create your List</p>
-			<form onSubmit={handleSubmit}>
+		<section className="createlist">
+			<form className="createlist__form" onSubmit={handleSubmit}>
 				<input
+					className="createlist__form--input"
 					placeholder="List name"
 					value={listName}
 					onChange={(e) => setListName(e.target.value)}
 					required
 				/>
 				<button
+					className="createlist__form--button"
 					type="submit"
 					disabled={disabled}
 				>
 					Create
 				</button>
 			</form>
-		</>
+		</section>
 	);
 };
 

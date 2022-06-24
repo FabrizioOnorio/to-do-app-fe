@@ -6,7 +6,9 @@ import CreateListPage from "./components/CreateListPage/CreateListPage";
 import ListPage from "./components/ListPage/ListPage";
 
 const address =
-	process.env.NODE_ENV === "development" ? "http://localhost:3030" : "";
+	process.env.NODE_ENV === "development"
+		? "http://localhost:3030"
+		: "https://still-shore-02028.herokuapp.com/";
 
 const App = () => {
 	const [todoLists, setTodoLists] = useState([]);
@@ -25,7 +27,10 @@ const App = () => {
 		<section className="App">
 			<Nav />
 			<Routes>
-				<Route path="/" element={<Home todoLists={todoLists} />} />
+				<Route
+					path="/"
+					element={<Home todoLists={todoLists} setTodoLists={setTodoLists} />}
+				/>
 				<Route
 					path="/create-list"
 					element={<CreateListPage setTodoLists={setTodoLists} />}

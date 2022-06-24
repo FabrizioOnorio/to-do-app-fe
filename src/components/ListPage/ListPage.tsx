@@ -25,19 +25,19 @@ const ListPage = ({ todoLists, setTodoLists }: IListPageProps) => {
 	);
 
 	return (
-		<>
+		<section className="listPage">
+      <h3 className="listPage__title">{selectedList?.listName}</h3>
 			<AdditemsForm
 				selectedListId={selectedListId}
 				setTodoLists={setTodoLists}
 			/>
-			<h3>{selectedList?.listName}:</h3>
 			<ItemsList
 				todoItems={todoItems}
 				doneTodoItems={doneTodoItems}
 				selectedListId={selectedListId}
 				setTodoLists={setTodoLists}
 			/>
-		</>
+		</section>
 	);
 };
 

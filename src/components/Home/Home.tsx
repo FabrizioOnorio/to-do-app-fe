@@ -4,16 +4,19 @@ import ListsContainer from "../ListsContainer/ListsContainer";
 
 interface IHomeProps {
 	todoLists: never[];
+	setTodoLists: React.Dispatch<React.SetStateAction<never[]>>;
 }
 
-const Home = ({ todoLists }: IHomeProps) => {
+const Home = ({ todoLists, setTodoLists }: IHomeProps) => {
 	return (
-		<>
-			<h1>Tasks Manager</h1>
-			<p>Add a new List</p>
-			<Link to={"/create-list"}>Create a new List</Link>
-			<ListsContainer todoLists={todoLists} />
-		</>
+		<section className="home">
+			<h1 className="home__title">Your Tasks Manager</h1>
+
+			<Link className="home__button--create" to={"/create-list"}>
+				Create a new List
+			</Link>
+			<ListsContainer todoLists={todoLists} setTodoLists={setTodoLists} />
+		</section>
 	);
 };
 

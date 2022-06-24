@@ -1,0 +1,37 @@
+.createlist {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.createlist__form {
+	margin: 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.createlist__form--input {
+	padding: 1.5rem;
+	border-radius: 1rem;
+	border: 1.5px solid #89b0ae;
+	font-size: large;
+	min-width: 50vw;
+}
+
+.createlist__form--button {
+	margin-top: 1rem;
+	border: 1.5px solid #89b0ae;
+	border-radius: 1rem;
+	background-color: #a4c3b2;
+	padding: 1rem;
+	min-width: 50vw;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #f6fff8;
+}
+
+.createlist__form--button:hover {
+	background-color: #a4c3b290;
+	border: 1.5px solid #8fb2b0;
+	color: #555b6e6f;
+}

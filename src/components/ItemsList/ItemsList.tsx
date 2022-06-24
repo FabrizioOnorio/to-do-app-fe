@@ -23,11 +23,12 @@ const ItemsList = ({
 	const handleClick = () => {
 		setOldTodos(!oldTodos);
 	};
+
 	return (
 		<>
-			<section>
-				<p>To do:</p>
+			<section className="itemsList">
 				<input
+					className="listItems__filter"
 					placeholder="filter..."
 					value={search}
 					onChange={(e) => setSearch(e.target.value)}
@@ -46,7 +47,10 @@ const ItemsList = ({
 			<button onClick={handleClick}>
 				{oldTodos ? "Hide" : "View"} Old Todos
 			</button>
-			<section style={{ display: oldTodos ? "block" : "none" }}>
+			<section
+				style={{ display: oldTodos ? "block" : "none" }}
+				className="itemsList"
+			>
 				<p>Done:</p>
 				{doneTodoItems?.map((todoItem: ItodoItem) => {
 					return (

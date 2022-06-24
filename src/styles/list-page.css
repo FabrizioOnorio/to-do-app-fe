@@ -1,0 +1,73 @@
+.listPage {
+	text-align: center;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.addtask__form {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+	gap: 0.5rem;
+}
+
+.addtask__form--input {
+	padding: 0.7rem;
+	border-radius: 1rem;
+	border: 1.5px solid #89b0ae;
+	font-size: large;
+	min-width: 50vw;
+}
+
+.addtask__form--button {
+	margin-top: 1rem;
+	border: 1.5px solid #89b0ae;
+	border-radius: 1rem;
+	background-color: #a4c3b2;
+	padding: 0.5rem;
+	min-width: 50vw;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #f6fff8;
+}
+
+.addtask__form--button:hover {
+	background-color: #a4c3b290;
+	border: 1.5px solid #8fb2b0;
+	color: #555b6e6f;
+}
+
+.listPage__title {
+	color: #555b6e;
+	font-size: 2rem;
+	font-weight: bolder;
+	margin: 1rem 0 1.5rem 0;
+}
+
+.listItems__filter {
+	padding: 0.5rem;
+	border-radius: 1rem;
+	border: 1.5px solid #89b0ae;
+	font-size: large;
+	min-width: 50vw;
+	margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.itemsList {
+	margin: 2rem;
+	background-color: #faf9f9;
+	padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.item {
+	background-color: #cce3de;
+	margin: 0.3rem 0;
+	border-radius: 1rem;
+	padding: 1rem 0;
+}
+
+.item:hover {
+	background-color: #cce3de7b;
+}
